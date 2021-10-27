@@ -1,5 +1,5 @@
-import oneModules from './modules/one';
-import twoModules from './modules/two';
+import timer from './modules/timer';
+// import twoModules from './modules/two';
 
-oneModules();
-twoModules();
+timer('29 october 2021');
+// twoModules();
