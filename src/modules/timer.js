@@ -17,7 +17,7 @@ const timer = (deadline) => {
 
     }
     const zero = (x) => {
-        if (x > 0 && x < 10) { 
+        if (x > 0 && x < 10) {
             return '0' + x;
         } else {
             return x;
@@ -38,7 +38,7 @@ const timer = (deadline) => {
         }
     }
     let idInterval = setInterval(() => {
-    updateClock()
+        updateClock()
     }, 1000);
 }
 
