@@ -25,8 +25,11 @@ const modal = () => {
 
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
+            const screenWidth = window.screen.width;
             modal.style.cssText = "display: block;";
-            openOpacity();
+            if (screenWidth >= '767') {
+                openOpacity();
+            }
         })
     })
 
