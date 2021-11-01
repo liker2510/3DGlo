@@ -12,7 +12,7 @@ const menu = () => {
         } else if (e.target.closest('.close-btn') || e.target.matches('menu>ul>li>a')) {
             handleMenu();
         } else if (!e.target.matches('menu')) {
-            handleMenu();
+            menu.classList.remove('active-menu');
         }
 
     })
