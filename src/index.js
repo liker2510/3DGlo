@@ -5,11 +5,13 @@ import calc from './modules/calc';
 import form from './modules/form';
 import smooth from './modules/smooth';
 import tabs from './modules/tabs';
+import slider from './modules/slider';
 
-timer('1 november 2021');
+timer('03 december 2021');
 menu();
 modal();
 calc();
 form();
 smooth();
 tabs();
+slider('.portfolio-content', '.portfolio-item');
