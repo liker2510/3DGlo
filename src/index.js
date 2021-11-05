@@ -10,7 +10,7 @@ import slider from './modules/slider';
 timer('03 december 2021');
 menu();
 modal();
-calc();
+calc(100);
 form();
 smooth();
 tabs();
