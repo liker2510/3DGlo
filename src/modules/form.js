@@ -13,9 +13,9 @@ const form = () => {
         } else if (e.target.name === "user_email") {
             e.target.value = e.target.value.replace(/[^a-zA-Z\s\-@-_.!~*']+/, '');
         } else if (e.target.name === "user_phone") {
-            e.target.value = e.target.value.replace(/[^0-9\-()]+/, '');
+            e.target.value = e.target.value.replace(/[^0-9\\+]+/, '');
         } else if (e.target.name === "user_message") {
-            e.target.value = e.target.value.replace(/[^а-яА-Я\-\s]+/, '');
+            e.target.value = e.target.value.replace(/[^.,\/#!$%\^&\*;:{}=\-_`~()а-яА-Я0-9\s]+/, '');
         }
     })
 }
