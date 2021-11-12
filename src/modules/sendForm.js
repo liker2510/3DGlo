@@ -7,6 +7,16 @@ const sendForm = ({ formId, someElem = [] }) => {
     const successText = 'Спасибо! Наш менеджер с вами свяжется!';
 
 
+    const changeColor = () => {
+        let textColor = document.querySelectorAll('#form3>.color');
+        if (textColor !== null) {
+            
+            textColor.forEach((index) => {
+                index.style = 'color: white;'
+            })
+        }
+    }
+
     const validate = (list) => {
         let success = true;
 
@@ -36,6 +46,7 @@ const sendForm = ({ formId, someElem = [] }) => {
 
         statusBlock.textContent = loadText;
         form.append(statusBlock);
+        changeColor();
 
         formData.forEach((val, key) => {
             formBody[key] = val;
@@ -44,9 +55,9 @@ const sendForm = ({ formId, someElem = [] }) => {
         someElem.forEach(elem => {
             const element = document.getElementById(elem.id);
 
-            if (elem.type === 'block') {
+            if (elem.type === 'block' && element.textContent !== '0') {
                 formBody[elem.id] = element.textContent;
-            } else if (elem.type === 'input') {
+            } else if (elem.type === 'input' && element.value !== 0) {
                 formBody[elem.id] = element.value;
             }
         })
@@ -57,6 +68,7 @@ const sendForm = ({ formId, someElem = [] }) => {
             sendData(formBody)
                 .then(data => {
                     statusBlock.textContent = successText;
+                    changeColor();
 
                     formElements.forEach(input => {
                         input.value = '';
@@ -64,6 +76,7 @@ const sendForm = ({ formId, someElem = [] }) => {
                 })
                 .catch(error => {
                     statusBlock.textContent = errorText;
+                    changeColor();
                 })
         } else {
             alert('Данные не валидны!!!');

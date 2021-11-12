@@ -16,7 +16,7 @@ form();
 smooth();
 tabs();
 slider('.portfolio-content', '.portfolio-item');
-sendForm({ 
+sendForm({
     formId: 'form1',
     someElem: [
         {
@@ -25,7 +25,7 @@ sendForm({
         }
     ]
 });
-sendForm({ 
+sendForm({
     formId: 'form2',
     someElem: [
         {
@@ -34,7 +34,7 @@ sendForm({
         }
     ]
 });
-sendForm({ 
+sendForm({
     formId: 'form3',
     someElem: [
         {

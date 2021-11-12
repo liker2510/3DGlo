@@ -1,5 +1,10 @@
 const form = () => {
     const getInput = document.querySelectorAll('.calc-block>input');
+    const getUserEmail = document.querySelectorAll('input[name=user_email]');
+
+    getUserEmail.forEach((index) => {
+        index.setAttribute("required", true);
+    })
 
     getInput.forEach((index) => {
         index.addEventListener('input', (e) => {
@@ -11,7 +16,7 @@ const form = () => {
         if (e.target.name === "user_name") {
             e.target.value = e.target.value.replace(/[^а-яА-Я\-\s]+/, '');
         } else if (e.target.name === "user_email") {
-            e.target.value = e.target.value.replace(/[^a-zA-Z\s\-@-_.!~*']+/, '');
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s\-@-_.!~*']+/, '')
         } else if (e.target.name === "user_phone") {
             e.target.value = e.target.value.replace(/[^0-9\\+]+/, '');
         } else if (e.target.name === "user_message") {
