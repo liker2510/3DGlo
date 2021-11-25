@@ -1,6 +1,6 @@
 const slider = (a, b) => {
     if (a === '.portfolio-content' && b === '.portfolio-item') {
-        const sliderBlock = document.querySelector(a);
+    const sliderBlock = document.querySelector(a);
     const slides = document.querySelectorAll(b);
     const portfolioDots = document.querySelector('.portfolio-dots')
     let dots = document.querySelectorAll('.dot');
